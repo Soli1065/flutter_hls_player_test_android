@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
 
+import 'hls_web.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -34,7 +36,9 @@ class HomeScreen extends StatelessWidget {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => HLSVideoPlayer(url: hlsUrl),
+                // builder: (context) => HLSVideoPlayer(url: hlsUrl),
+                // builder: (context) => HLSVideoPlayerWeb(url: hlsUrl),
+                builder: (context) => VideoApp(),
               ),
             );
           },
@@ -125,3 +129,4 @@ class _HLSVideoPlayerState extends State<HLSVideoPlayer> {
     );
   }
 }
+
